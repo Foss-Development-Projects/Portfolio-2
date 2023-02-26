@@ -1,0 +1,16 @@
+.navbar {
+    background-color: red;
+}
+.navbar-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-items a {
+    padding: 10px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    color: white;
+}
