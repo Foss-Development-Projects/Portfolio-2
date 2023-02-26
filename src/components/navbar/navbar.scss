@@ -1,0 +1,36 @@
+@use './styles/logo.scss';
+@use './styles/link.scss';
+:root {
+    --navbar-bg-color: transparent;
+}
+.navbar {
+    background-color: var(--navbar-bg-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    align-items: center;
+    position: relative;
+    animation-name: animate-navbar;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-delay: 0.001s;
+    animation-duration: 0.5s;
+    
+}
+@keyframes animate-navbar {
+    0% {
+        top: 30px;
+        transition: bottom, 1ms ease-in-out;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        transition: top, 1ms ease-in-out;
+        opacity: 1;
+    }
+}
+@media (max-width: 600px){
+    .navbar-list {
+        // display: none;
+    }
+}
