@@ -1,5 +1,10 @@
+html {
+	scroll-behavior: smooth;
+	color: white;
+}
 .index-body {
-	background-image: url('./images/Snow.svg');
+	background-image: url('./images/circuit.svg');
+	background-color: rgba(0,0,0,0.85);
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;

@@ -1,0 +1,22 @@
+.intro-section {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    justify-content: space-between;
+}
+.intro-image-section {
+    img {
+        width: 350px;
+        height: 350px;
+    }
+}
+.intro-details-section {
+    h1 {
+        font-size: 32px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    h3 {
+        font-weight: lighter;
+        font-family: "Open Sans", sans-serif;
+    }
+    padding-top: 20px;
+}
