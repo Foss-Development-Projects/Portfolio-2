@@ -1,26 +1,31 @@
 import "./navbar.scss";
-
+class {
+    toggleNavbar() {
+        const menuBtn = document.getElementById("menu-item")
+        console.log(menuBtn)
+    }
+}
 <nav.navbar>
     <img.navbar-logo src='./images/fz-logo.png' />
     <ul.navbar-list>
         <li.nav-items>
-            <a href="#">Home</a>
+            <a.nav-link-1 href="#">Home</a>
         </li>
         <li.nav-items>
-            <a href="#">Intro</a>
+            <a.nav-link-2 href="#">Intro</a>
         </li>
         <li.nav-items>
-            <a href="#">Projects</a>
+            <a.nav-link-3 href="#">Projects</a>
         </li>
         <li.nav-items>
-            <a href="#">Skills</a>
+            <a.nav-link-4 href="#">Skills</a>
         </li>
         <li.nav-items>
-            <a href="#">About</a>
+            <a.nav-link-5 href="#">About</a>
         </li>
     </ul>
     <section class="menu-button-section">
-        <button id="menu-item">
+        <button on-click("toggleNavbar") id="menu-item">
             <img src="./images/menu.svg" />
         </button>
     </section>

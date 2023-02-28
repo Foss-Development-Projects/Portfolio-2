@@ -5,9 +5,13 @@
     justify-content: center;
 }
 .nav-items a {
-    padding: 10px;
+    border-radius: 50%;
+    padding: 10px 15px;
     display: inline-block;
     text-decoration: none;
     font-family: "Open Sans", sans-serif;
     color: white;
+    &:hover {
+        background: gray;
+    }
 }

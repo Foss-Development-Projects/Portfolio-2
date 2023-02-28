@@ -1,22 +1,103 @@
 .intro-section {
-    display: grid;
-    grid-template-columns: 350px 1fr;
-    justify-content: space-between;
+	display: grid;
+	grid-template-columns: 350px 1fr;
+	justify-content: space-between;
 }
 .intro-image-section {
-    img {
-        width: 350px;
-        height: 350px;
-    }
+	img {
+		width: 350px;
+		height: 350px;
+	}
 }
 .intro-details-section {
-    h1 {
-        font-size: 32px;
-        font-family: 'Montserrat', sans-serif;
+	h1 {
+		font-size: 28px;
+		font-family: "Montserrat", sans-serif;
+		overflow: hidden;
+		border-right: 0.15em solid teal;
+		white-space: nowrap;
+		letter-spacing: 0.15em;
+		max-width: 300px;
+		animation: typing 5s steps(40, end), blink-caret 1s step-end infinite;
+		animation-timing-function: linear ease-in;
+		.emphasize {
+			color: cyan;
+		}
+	}
+	h3 {
+		max-width: 350px;
+		font-weight: bolder;
+		font-family: "montserrat", sans-serif;
+	}
+	h4 {
+		display: flex;
+		align-items: center;
+		font-size: 20px;
+        font-family: "montserrat", sans-serif;
+		i {
+			color: rgba(255, 0, 0, 0.945);
+			margin-left: 5px;
+            font-size: 32px;
+			animation-name: heart-icon;
+            animation-duration: 2s;
+            text-shadow: 0 0 5px red;
+            animation-timing-function: linear;
+            animation-iteration-count: 3;
+		}
+	}
+	padding-top: 20px;
+}
+@keyframes heart-icon {
+    0% {
+        transform: scale(1);
     }
-    h3 {
-        font-weight: lighter;
-        font-family: "Open Sans", sans-serif;
+    50% {
+        transform: scale(1.1);
     }
-    padding-top: 20px;
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+	from,
+	to {
+		border-color: transparent;
+	}
+	50% {
+		border-color: teal;
+	}
+}
+@media (max-width: 700px) {
+	.intro-section {
+		width: 100%;
+		grid-template-columns: 1fr;
+		align-items: center;
+		justify-content: center;
+	}
+	.intro-image-section {
+		text-align: center;
+		img {
+			max-width: 250px;
+			max-height: 250px;
+		}
+	}
+	.intro-details-section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		h3 {
+			max-width: 450px;
+		}
+	}
 }
