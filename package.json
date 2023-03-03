@@ -1,22 +1,22 @@
 {
   "name": "portfolio-2",
-  "description": "Sample app that demonstrates the power of building UI components using Marko, Vite, and Express",
+  "description": "Sample app that demonstrates the power of building UI components using Marko, Vite and Fastify",
   "version": "1.0.0",
   "dependencies": {
-    "@marko/express": "^2.0.0",
-    "compression": "^1.7.4",
-    "express": "^4.18.1",
-    "marko": "^5.21.3",
-    "raptor-pubsub": "^1.0.5"
+    "@fastify/compress": "^6.2.0",
+    "@fastify/static": "^6.6.0",
+    "@marko/fastify": "^1.1.1",
+    "fastify": "^4.11.0",
+    "marko": "^5.22.1"
   },
   "devDependencies": {
-    "@marko/compiler": "^5.22.1",
-    "@marko/vite": "^2.3.4",
+    "@marko/compiler": "^5.23.1",
+    "@marko/vite": "^2.3.11",
     "cross-env": "^7.0.3",
-    "marked": "^4.0.18",
+    "postcss-preset-env": "^7.8.3",
     "rimraf": "^3.0.2",
     "sass": "^1.58.3",
-    "vite": "^3.0.3"
+    "vite": "^4.0.4"
   },
   "private": true,
   "scripts": {

@@ -2,14 +2,16 @@ import "./navbar.scss";
 class {
     toggleNavbar() {
         const menuBtn = document.getElementById("menu-item")
-        console.log(menuBtn)
+        const navBar = document.getElementById("navbar-list")
+        navBar.classList.toggle("show-navbar")
+        console.log(navBar)
     }
 }
-<nav.navbar>
+<nav.navbar#navbar on-load("animateNavbar")>
     <img.navbar-logo src='./images/fz-logo.png' />
-    <ul.navbar-list>
+    <ul.navbar-list id="navbar-list">
         <li.nav-items>
-            <a.nav-link-1 href="#">Home</a>
+            <a.nav-link-1 href="#intro">Home</a>
         </li>
         <li.nav-items>
             <a.nav-link-2 href="#">Intro</a>
@@ -24,7 +26,7 @@ class {
             <a.nav-link-5 href="#">About</a>
         </li>
     </ul>
-    <section class="menu-button-section">
+    <section class="menu-button-section" id="intro">
         <button on-click("toggleNavbar") id="menu-item">
             <img src="./images/menu.svg" />
         </button>

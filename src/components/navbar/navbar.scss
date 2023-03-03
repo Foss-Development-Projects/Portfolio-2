@@ -8,13 +8,15 @@
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
+    opacity: 1;
     align-items: center;
     position: relative;
+    transition: opacity, 100ms ease-in-out;
     animation-name: animate-navbar;
     animation-iteration-count: 1;
-    animation-timing-function: ease-out;
-    animation-delay: 0.001s;
-    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-duration: .5s;
 }
 
 .menu-button-section {
@@ -32,21 +34,32 @@
 }
 @keyframes animate-navbar {
     0% {
-        top: 30px;
-        transition: bottom, 1ms ease-in-out;
+        top: 50px;
+        transition: bottom,opacity, 1ms ease-in-out;
         opacity: 0;
     }
     100% {
         top: 0px;
-        transition: top, 1ms ease-in-out;
+        transition: bottom,opacity, 1ms ease-in-out;
         opacity: 1;
     }
+}
+.show-navbar {
+    transform: scale(1)!important;
+    transform-origin: top right;
+    transition: transform, 200ms ease;
 }
 @media (max-width: 600px){
     .menu-button-section {
         display: inline-block;
     }
     .navbar-list {
-        display: none;
+        transform: scale(0);
+        transform-origin: top right;
+        transition: transform, 200ms ease;
+        flex-direction: column;
+        position: absolute;
+        right: 25px;
+        top: 60px;
     }
 }

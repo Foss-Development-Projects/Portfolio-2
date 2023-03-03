@@ -1,4 +1,4 @@
-Marko Widgets: UI Components Playground w/ Vite
+Marko Widgets: UI Components Playground w/ Vite & Fastify
 ==================================
 
 ## Getting Started
