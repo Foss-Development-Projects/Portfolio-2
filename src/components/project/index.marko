@@ -1,49 +1,41 @@
-import './project.scss';
+import "./project.scss";
 
 <article.project>
-        <div.project-canvas>
-            <img.project-image src="./images/user.png" loading="lazy" alt="Project Image"/>
-        </div>
-        <div.project-links>
-            <a.project-demo href="#">
-                <i.bi.bi-broadcast></i>
-                <p>Live</p>
-            </a>
-            <a.project-src href="https://github.com/Foster0123/Authly">
-                <i.bi.bi-github></i>
-                <p>GitHub</p>
-            </a>
-        </div>
-        <div.project-skills>
-            <img.project-tools src="./images/pug.png" />
-            <img.project-tools src="./images/sass.png" />
-            <img.project-tools src="./images/node.png" />
-            <img.project-tools src="./images/express.png" />
-            <img.project-tools src="./images/postgresql.png" />
-            <img.project-tools src="./images/javascript.png" />
-        </div>
-        <header.project-title>Authly</header>
-        <p.project-details>User Authentication Application</p>
-        <div.project-features>
-            <header>Core Features</header>
-            <ul.features-list>
-                <li>1. Create account</li>
-                <li>2. Update account details</li>
-                <li>3. Delete account</li>
-                <li>4. Logout of account</li>
-                <li>5. Upload profile picture</li>
-                <li>6. Reset Forgotten Password</li>
-            </ul>
-        </div>
-        <div.project-prerequisites>
-            <header>Prerequisites</header>
-            <ul.prerequisites-list>
-                <li>Front-End
-                    <ul.front-end>
-                        <li>Pug</li>
-                        <li>SCSS</li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </article>
+    <div.project-canvas style={backgroundImage: `url(${input.bgImage})`}>
+        <i.new-image-window.bi.bi-box-arrow-up-right></i>
+        <img.project-image
+            src=`${input.logoImage}`
+            loading="lazy"
+            alt="Project Image"
+        >
+    </div>
+    <div.project-links>
+        <a.project-demo href="#" target="_blank">
+            <i.bi.bi-broadcast/>
+            <p>Live</p>
+        </a>
+        <a.project-src
+            href="https://github.com/Foster0123/Authly"
+            target="_blank"
+        >
+            <i.bi.bi-github/>
+            <p>GitHub</p>
+        </a>
+    </div>
+    <div.project-skills>
+        
+    </div>
+    <header.project-title>${input.projectName}</header>
+    <p.project-details>${input.projectDetail}</p>
+    <div.project-features>
+        <header>Core Features</header>
+        <ul.features-list>
+            <li>1. Create account</li>
+            <li>2. Update account details</li>
+            <li>3. Delete account</li>
+            <li>4. Logout of account</li>
+            <li>5. Upload profile picture</li>
+            <li>6. Reset Forgotten Password</li>
+        </ul>
+    </div>
+</article>

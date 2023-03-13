@@ -1,4 +1,38 @@
 import "./projects.scss";
+
+$ const data = [
+    { 
+        name: 'Authly', 
+        details: 'User Authentication Application',
+        bgImage: './images/projects/authly/authly-bg.jpeg',
+        logoImage: './images/projects/authly/authly-logo.png',
+        tech: [
+            "./images/skills/pug.png", 
+            "./images/skills/sass.png", 
+            "./images/skills/node.png", 
+            "./images/skills/express.png", 
+            "./images/skills/postgresql.png", 
+            "./images/skills/javascript.png"
+        ]
+    },
+    { 
+        name: 'Blaze', 
+        details: 'Todo Application' ,
+        bgImage: './images/projects/authly/authly-bg.jpeg',
+        logoImage: './images/projects/authly/authly-logo.png',
+        tech: ["React", "Redux", "Router", "NodeJS", "ExpressJS", "SCSS"]
+    }
+]
+
 <section.projects id="projects">
-    <project />
+    <for|item, index| of=data>
+        <project 
+            key=index
+            projectName=`${item.name}` 
+            projectDetail=`${item.details}` 
+            techs=`${item.tech}`
+            bgImage=`${item.bgImage}`
+            logoImage=`${item.logoImage}`
+        />
+    </for>
 </section>
