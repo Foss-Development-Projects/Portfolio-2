@@ -1,0 +1,38 @@
+@use './styles/project-card-image.scss';
+@use './styles/project-card-description.scss';
+@use './styles/project-card-link.scss';
+@use './styles/project-card-skill.scss';
+@use './styles/project-card-feature.scss';
+@use './styles/project-card-prerequisite.scss';
+
+:root {
+	--card-bg-color: rgba(0, 0, 0, 0.85);
+	--card-fg-color: white;
+}
+
+.project {
+	color: var(--card-fg-color);
+	width: 100%;
+	padding: 5px;
+	border-radius: 15px;
+	background-color: var(--card-bg-color);
+	font-family: "Open Sans";
+}
+
+@media (max-width: 1000px) {
+	.projects {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media (max-width: 800px) {
+	.projects {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 450px) {
+	.projects {
+		grid-template-columns: 1fr;
+	}
+}

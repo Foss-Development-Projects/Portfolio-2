@@ -1,0 +1,14 @@
+.project-skills {
+	margin-top: 10px;
+	padding-right: 10px;
+	justify-content: flex-end;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(6, 35px);
+	.project-tools {
+		width: 35px;
+		height: 35px;
+		object-fit: cover;
+		border-radius: 50%;
+	}
+}
