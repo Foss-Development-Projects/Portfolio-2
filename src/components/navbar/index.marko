@@ -1,29 +1,32 @@
 import "./navbar.scss";
 class {
     toggleNavbar() {
-        const menuBtn = document.getElementById("menu-item")
         const navBar = document.getElementById("navbar-list")
         navBar.classList.toggle("show-navbar")
         console.log(navBar)
     }
+    toggleBackground(e) {
+        e.target.style.backgroundColor = "black"
+        console.log("Working")
+    }
 }
-<nav.navbar#navbar on-load("animateNavbar")>
+<nav.navbar#navbar onscroll="toggleBackground">
     <img.navbar-logo src='./images/fz-logo.png' />
     <ul.navbar-list id="navbar-list">
         <li.nav-items>
-            <a.nav-link-1 href="#intro">Home</a>
+            <a.nav-link-1 href="#home">Home</a>
         </li>
         <li.nav-items>
-            <a.nav-link-2 href="#">Intro</a>
+            <a.nav-link-2 href="#intro">Intro</a>
         </li>
         <li.nav-items>
-            <a.nav-link-3 href="#">Projects</a>
+            <a.nav-link-3 href="#projects">Projects</a>
         </li>
         <li.nav-items>
-            <a.nav-link-4 href="#">Skills</a>
+            <a.nav-link-4 href="#skills">Skills</a>
         </li>
         <li.nav-items>
-            <a.nav-link-5 href="#">About</a>
+            <a.nav-link-5 href="#about">About</a>
         </li>
     </ul>
     <section class="menu-button-section" id="intro">

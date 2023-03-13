@@ -4,19 +4,19 @@
   "version": "1.0.0",
   "dependencies": {
     "@fastify/compress": "^6.2.0",
-    "@fastify/static": "^6.6.0",
+    "@fastify/static": "^6.9.0",
     "@marko/fastify": "^1.1.1",
-    "fastify": "^4.11.0",
-    "marko": "^5.22.1"
+    "fastify": "^4.14.1",
+    "marko": "^5.24.0"
   },
   "devDependencies": {
-    "@marko/compiler": "^5.23.1",
-    "@marko/vite": "^2.3.11",
+    "@marko/compiler": "^5.26.0",
+    "@marko/vite": "^2.3.14",
     "cross-env": "^7.0.3",
-    "postcss-preset-env": "^7.8.3",
-    "rimraf": "^3.0.2",
-    "sass": "^1.58.3",
-    "vite": "^4.0.4"
+    "postcss-preset-env": "^8.0.1",
+    "rimraf": "^4.4.0",
+    "sass": "^1.59.2",
+    "vite": "^4.1.4"
   },
   "private": true,
   "scripts": {

@@ -10,7 +10,9 @@
     padding: 0 20px;
     opacity: 1;
     align-items: center;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
     transition: opacity, 100ms ease-in-out;
     animation-name: animate-navbar;
     animation-iteration-count: 1;
