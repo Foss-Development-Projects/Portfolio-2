@@ -23,11 +23,11 @@
 		position: absolute;
 		right: 5px;
 		top: 5px;
+		padding: 5px;
+		border-radius: 50%;
 		transition: background-color, 200ms ease;
 		&:hover {
 			background-color: rgba(0,0,0,0.85);
-			padding: 1.5px;
-			border-radius: 50%;
 			transition: background-color, 200ms ease;
 		}
 		i {

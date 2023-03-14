@@ -1,8 +1,10 @@
 import "./project.scss";
-$ let data = input.techs.split(",")
+$ let skills = input.techs.split(",")
+$ let features = input.features.split(",")
+
 <article.project>
     <div.project-canvas style={backgroundImage: `url(${input.bgImage})`}>
-        <a.new-image-window href=`${input.liveLink}`>
+        <a.new-image-window href=`${input.bgImage}` target="_blank">
             <i.bi.bi-box-arrow-up-right></i>
         </a>
         <img.project-image
@@ -41,16 +43,13 @@ $ let data = input.techs.split(",")
     <div.project-features>
         <header>Core Features</header>
         <ul.features-list>
-            <li>1. Create account</li>
-            <li>2. Update account details</li>
-            <li>3. Delete account</li>
-            <li>4. Logout of account</li>
-            <li>5. Upload profile picture</li>
-            <li>6. Reset Forgotten Password</li>
+            <for|item, index| of=features>
+                <li>${index + 1}. ${item}</li>
+            </for>
         </ul>
     </div>
     <div.project-skills>
-    <for|item| of=data>
+    <for|item| of=skills>
         <img.project-tools src=item  alt="Skill Logo" loading="lazy"/>
     </for>
     </div>

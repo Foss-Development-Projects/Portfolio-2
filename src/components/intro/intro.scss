@@ -1,3 +1,11 @@
+:root {
+	--default-bg-color: rgba(0,0,0,0.85);
+}
+.project-header {
+	font-size: 36px;
+	text-align: center;
+	font-family: "Open Sans", sans-serif;
+}
 .intro-section {
 	display: grid;
 	grid-template-columns: 500px 1fr;
@@ -29,7 +37,13 @@
 		font-family: "Montserrat", sans-serif;
 		letter-spacing: 0.15em;
 		.emphasize {
-			color: cyan;
+			background: linear-gradient(45deg, gray, black);
+			background-clip: text;
+			font-style: normal;
+			letter-spacing: normal;
+			font-weight: bolder;
+			-webkit-text-fill-color: transparent;
+			background-color: var(--default-bg-color);
 		}
 	}
 }
@@ -54,9 +68,7 @@
 		flex-direction: column;
 		h1 {
 			font-size: x-large;
-		}
-		h2 {
-			max-width: 400px;
+			text-align: center;
 		}
 	}
 }
