@@ -1,8 +1,10 @@
 import "./project.scss";
-
+$ let data = input.techs.split(",")
 <article.project>
     <div.project-canvas style={backgroundImage: `url(${input.bgImage})`}>
-        <i.new-image-window.bi.bi-box-arrow-up-right></i>
+        <a.new-image-window href=`${input.liveLink}`>
+            <i.bi.bi-box-arrow-up-right></i>
+        </a>
         <img.project-image
             src=`${input.logoImage}`
             loading="lazy"
@@ -10,21 +12,30 @@ import "./project.scss";
         >
     </div>
     <div.project-links>
-        <a.project-demo href="#" target="_blank">
+        <a.project-demo href=`${input.liveLink}` target="_blank">
             <i.bi.bi-broadcast/>
             <p>Live</p>
         </a>
         <a.project-src
-            href="https://github.com/Foster0123/Authly"
+            href=`${input.githubLink}`
             target="_blank"
         >
             <i.bi.bi-github/>
             <p>GitHub</p>
         </a>
     </div>
-    <div.project-skills>
-        
-    </div>
+    <if(input.status === "Ongoing")>
+        <div.project-status.project-ongoing>
+            <i.bi.bi-activity></i>
+            <p>Under Development</p>
+        </div>
+    </if>
+    <else>
+        <div.project-status.project-finished>
+                <i.fa-solid.fa-circle-check></i>
+                <p>Completed</p>
+        </div>
+    </else>
     <header.project-title>${input.projectName}</header>
     <p.project-details>${input.projectDetail}</p>
     <div.project-features>
@@ -37,5 +48,10 @@ import "./project.scss";
             <li>5. Upload profile picture</li>
             <li>6. Reset Forgotten Password</li>
         </ul>
+    </div>
+    <div.project-skills>
+    <for|item| of=data>
+        <img.project-tools src=item  alt="Skill Logo" loading="lazy"/>
+    </for>
     </div>
 </article>
