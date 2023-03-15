@@ -54,9 +54,17 @@
 		}
 	}
 }
+.hide-readmore-content {
+	opacity: 0;
+	transition: opacity, 200ms ease-in-out;
+}
+.hide-readmore {
+	height: 30px;
+	transition: all 0.2s ease-in-out;
+}
 .readmore-section {
 	margin-top: 15px;
-	max-width: 250px;
+	max-width: 270px;
 	min-height: 150px;
 	padding: 10px 10px 0 10px;
 	line-height: normal;
@@ -65,13 +73,13 @@
 	.readmore-button {
 		background: none;
 		background-color: transparent;
-		border: 2px solid white;
+		border: 1px solid white;
 		font-weight: lighter;
 		color: white;
-		font-weight: bold;
+		font-weight: medium;
 		font-size:16px;
 		font-family: "Open Sans", sans-serif;
-		padding: 5px;
+		padding: 10px;
 		outline: none;
 		position: absolute;
 		bottom: 0;

@@ -21,7 +21,11 @@
     animation-duration: .5s;
     z-index: 10;
 }
-
+.navbar-bg {
+    transition: background-color, 200ms ease-in-out;
+    background-color: rgba(0,0,0,0.7);
+    backdrop-filter: blur(2.5px);
+}
 .menu-button-section {
     display: none;
     button {
@@ -63,6 +67,7 @@
         flex-direction: column;
         position: absolute;
         right: 25px;
-        top: 60px;
+        top: 72px;
+        border-radius: 0 0 0 10px;
     }
 }

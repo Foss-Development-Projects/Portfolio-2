@@ -1,37 +1,46 @@
 import "./navbar.scss";
 class {
     toggleNavbar() {
-        const navBar = document.getElementById("navbar-list")
-        navBar.classList.toggle("show-navbar")
-        console.log(navBar)
+        const navBar = document.getElementById("navbar-list");
+        navBar.classList.toggle("show-navbar");
     }
-    toggleBackground(e) {
-        e.target.style.backgroundColor = "black"
-        console.log("Working")
+    onMount() {
+        window.onscroll = () => {
+            const navbar = document.getElementById("navbar");
+            const navList = document.getElementById("navbar-list");
+
+            if (window.scrollY > 50) {
+                navbar.classList.add("navbar-bg");
+                navList.style.right = "0px";
+                if(window.innerWidth < 600){
+                    navList.classList.add("navbar-bg")
+                }
+                else {
+                    navList.classList.remove("navbar-bg")
+                }
+            } else {
+                navbar.classList.remove("navbar-bg");
+                navList.style.right = "25px";
+                if(window.innerWidth < 600){
+                    navList.classList.remove("navbar-bg")
+                }
+            }
+        };
     }
 }
-<nav.navbar#navbar onscroll="toggleBackground">
-    <img.navbar-logo src='./images/fz-logo.png' />
-    <ul.navbar-list id="navbar-list">
-        <li.nav-items>
-            <a.nav-link-1 href="#home">Home</a>
-        </li>
-        <li.nav-items>
-            <a.nav-link-2 href="#intro">Intro</a>
-        </li>
-        <li.nav-items>
-            <a.nav-link-3 href="#projects">Projects</a>
-        </li>
-        <li.nav-items>
-            <a.nav-link-4 href="#skills">Skills</a>
-        </li>
-        <li.nav-items>
-            <a.nav-link-5 href="#about">About</a>
-        </li>
+
+<nav.navbar#navbar>
+    <img.navbar-logo src="./images/fz-logo.png">
+    <ul.navbar-list#navbar-list>
+        <li.nav-items><a.nav-link-1 href="#home">Home</a></li>
+        <li.nav-items><a.nav-link-2 href="#intro">Intro</a></li>
+        <li.nav-items><a.nav-link-3 href="#projects">Projects</a></li>
+        <li.nav-items><a.nav-link-4 href="#skills">Skills</a></li>
+        <li.nav-items><a.nav-link-5 href="#about">About</a></li>
     </ul>
-    <section class="menu-button-section" id="intro">
-        <button on-click("toggleNavbar") id="menu-item">
-            <img src="./images/menu.svg" />
+    <section.menu-button-section#intro>
+        <button#menu-item on-click("toggleNavbar")>
+            <img src="./images/menu.svg">
         </button>
     </section>
 </nav>

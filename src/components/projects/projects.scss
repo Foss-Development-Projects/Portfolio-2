@@ -5,6 +5,9 @@
 	grid-template-columns: repeat(3, 1fr);
 	grid-template-rows: minmax(400px, auto);
 }
+.project-header {
+	margin: 20px 0;
+}
 @media (max-width: 1000px) {
 	.projects {
 		grid-template-columns: repeat(2, 1fr);
