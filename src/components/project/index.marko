@@ -1,6 +1,7 @@
 import "./project.scss";
-$ let skills = input.techs.split(",")
+$ let techs = input.techs.split(",")
 $ let features = input.features.split(",")
+$ let skills = input.skills.split(",")
 
 <article.project>
     <div.project-canvas style={backgroundImage: `url(${input.bgImage})`}>
@@ -49,8 +50,8 @@ $ let features = input.features.split(",")
         </ul>
     </div>
     <div.project-skills>
-    <for|item| of=skills>
-        <img.project-tools src=item  alt="Skill Logo" loading="lazy"/>
+    <for|item, index| of=techs>
+        <img.project-tools src=item  alt="Skill Logo" title=skills[index] loading="lazy"/>
     </for>
     </div>
 </article>

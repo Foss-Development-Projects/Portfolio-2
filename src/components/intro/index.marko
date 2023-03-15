@@ -1,4 +1,13 @@
 import "./intro.scss";
+class {
+    toggleReadMore () {
+        const rms = document.getElementById("readmore")
+        const rmc = document.getElementById("readmore-content")
+
+        rms.classList.toggle("hide-readmore");
+        rmc.classList.toggle("hide-readmore-content");
+    }
+}
 <div.intro-section#intro>
     <section.intro-details-section>
         <h1.intro-title>I Am Foster Z,</h1>
@@ -7,7 +16,7 @@ import "./intro.scss";
             <p.readmore-content#readmore-content>
                 I love building exotic full-stack applications which are performant, scalable, stable, responsive & highly user friendly
             </p>
-            <button.readmore-button#readmore-btn>
+            <button.readmore-button on-click("toggleReadMore")>
                 Read more
             </button>
         </section>

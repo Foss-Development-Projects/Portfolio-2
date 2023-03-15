@@ -16,6 +16,11 @@ const data = [
 			`${skillSrc}/postgresql.png`,
 			`${skillSrc}/javascript.png`,
 		],
+		skills: [
+			'Pug', 'Sass', "NodeJS", 
+			'ExpressJS', 'PostgreSQL', 
+			'JavaScript'
+		],
 		features: [
 			"Create account",
 			"Update account details",
@@ -42,6 +47,11 @@ const data = [
 			`${skillSrc}/mysql.png`,
 			`${skillSrc}/typescript.png`,
 		],
+		skills: [
+			'React','Redux', "NodeJS", 
+			'ExpressJS', 'Redis', 'MySQL', 
+			'TypeScript'
+		],
 		features: [
 			"Create account",
 			"Update account details",
@@ -66,6 +76,10 @@ const data = [
 			`${skillSrc}/redis.png`,
 			`${skillSrc}/postgresql.png`,
 			`${skillSrc}/typescript.png`,
+		],
+		skills: [
+			'Angular', 'Actix Web', 'SCSS', 
+			'Redis','PostgreSQL', 'TypeScript'
 		],
 		features: [
 			"Create account",

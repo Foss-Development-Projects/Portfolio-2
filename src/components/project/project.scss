@@ -6,7 +6,7 @@
 @use './styles/project-card-prerequisite.scss';
 
 :root {
-	--card-bg-color: rgba(0, 0, 0, 0.85);
+	--card-bg-color: linear-gradient(60deg, rgba(0, 0, 0, 0.85), grey 150%);
 	--card-fg-color: white;
 }
 
@@ -16,8 +16,16 @@
 	padding: 5px;
 	box-shadow: 0 0 5px whitesmoke;
 	border-radius: 15px;
-	background-color: var(--card-bg-color);
+	background: var(--card-bg-color);
 	font-family: "Open Sans";
+	transform: scale(1);
+	transition: all 200ms ease-in-out;
+	&:hover {
+		transform: scale(1.01);
+		transition: all 200ms ease-in-out;
+		box-shadow: 0 0 5px silver;
+		z-index: 1;
+	}
 }
 ul {
 	list-style-type: none;

@@ -59,17 +59,21 @@
 	transition: opacity, 200ms ease-in-out;
 }
 .hide-readmore {
-	height: 30px;
-	transition: all 0.2s ease-in-out;
+	height: 45px!important;
+	transition: min-height 0.2s ease-in-out;
 }
 .readmore-section {
 	margin-top: 15px;
 	max-width: 270px;
-	min-height: 150px;
+	height: 170px;
 	padding: 10px 10px 0 10px;
 	line-height: normal;
 	text-align: left;
+	transition: min-height, 200ms ease-in-out;
 	position: relative;
+	.readmore-content {
+		transition: opacity, 200ms ease-in-out;
+	}
 	.readmore-button {
 		background: none;
 		background-color: transparent;
@@ -110,11 +114,22 @@
 		justify-content: center;
 		align-items: center;
 		margin-left: 0;
+		margin-top: 350px;
 		text-align: center;
 		flex-direction: column;
 		h1 {
 			font-size: x-large;
 			text-align: center;
+		}
+	}
+	.readmore-section {
+		margin-top: 30px;
+		.readmore-content {
+			margin-bottom: 15px;
+		}
+		.readmore-button {
+			right: 50%;
+			transform: translate(50%, -50%);
 		}
 	}
 }
