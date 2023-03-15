@@ -4,12 +4,12 @@
 	align-items: center;
 	justify-content: center;
 	display: grid;
-	grid-gap: 10px;
+	grid-gap: 5px;
 	width: 100%;
 	grid-template-columns: repeat(6, 35px);
 	.project-tools {
-		width: 35px;
-		height: 35px;
+		width: 30px;
+		height: 30px;
 		object-fit: cover;
 		border-radius: 50%;
 	}
